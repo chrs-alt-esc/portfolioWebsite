@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import profilePic from '@/public/toad_dr_pepper.jpg';
 import React from 'react';
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -31,20 +31,21 @@ export default function Intro() {
               priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
-          </motion.div>
-          <motion.span 
-            className="absolute -bottom-1 -left-5 text-4xl"
-            initial = {{ opacity: 0, scale: 0 }}
-            animate = {{ opacity: 1, scale: 1 }}
-            transition = {{ 
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.5,
-            }}
-          >
-            👋
-          </motion.span>
+              <motion.span 
+                className="absolute -bottom-1 -left-7 text-4xl"
+                animate = {{ 
+                  x: [0, -7, 0, 6, 0, -7, 0],
+                  rotate: [0, -18, 0, 18, 0, -18, 0]
+                }}
+                transition = {{ 
+                  delay: 1,
+                  duration: 0.75,
+                  time: [0, 0.1, 0.25, 0.35, 0.5, 0.625, 0.75],
+                }}
+              >
+                👋
+              </motion.span>
+          </motion.div>          
         </div>
       </div>
       <motion.p 
