@@ -9,10 +9,13 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from 'react-icons/fa';
 import useSectionInView from '@/lib/hooks';
+import { useActiveSectionContext } from "@/context/active_section_context";
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
-  
+  const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
+
   return (
     <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
@@ -75,25 +78,29 @@ export default function Intro() {
         <Link 
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact")
+            setTimeOfLastClick(Date.now())
+          }}
         >
           Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
         </Link>
         <a 
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full border border-black/10 outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full borderBlack outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
           href="/Chris_Escobar_resume_tech2c.pdf"
           download
         >
           Download resume <HiDownload className="opacity-60 transition"/>
         </a>
         <a 
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full border border-black/10 outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full borderBlack outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer"
           href="https://www.linkedin.com/in/chris-r-escobar/"
           target="_blank"
         >
           <BsLinkedin />
         </a>
         <a 
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full border border-black/10 outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full borderBlack outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer"
           href="https://github.com/crscobar"
           target='_blank'
         >

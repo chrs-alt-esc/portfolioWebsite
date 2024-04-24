@@ -14,10 +14,10 @@ export default function Experience() {
   return (
     <section
       ref={ref}
-      className="my-20 flex w-full scroll-mt-28 flex-col items-center justify-center gap-10"
+      className="my-10 flex w-full scroll-mt-28 flex-col items-center justify-center"
       id="experience"
     >
-      <SectionHeading>My work experience</SectionHeading>
+      <SectionHeading>My Work Experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => {
           return ( <TimelineElement key={index} item={item} /> );
