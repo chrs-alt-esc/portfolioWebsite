@@ -94,7 +94,7 @@ export default function Intro() {
         </a>
         <a 
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full border border-black/10 outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer"
-          href="https://github.com/eschriscobar"
+          href="https://github.com/crscobar"
           target='_blank'
         >
           <FaGithubSquare />

@@ -21,7 +21,7 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p mb-3>
+      <p>
         I went to the University of Illinois at Chicago and graduated with a {" "} 
         <span className="font-semibold">Bachelors of Science in Computer Engineering</span>. During my classes, I found myself enjoying my {" "}
         <span className="font-semibold">computer architecture, programming, and algorithms</span> classes more than my electrical-focused classes.
