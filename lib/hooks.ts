@@ -4,17 +4,24 @@ import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
 
-export default function useSectionInView(sectionName: SectionName, thresholdValue = 0.75) {
+export default function useSectionInView(sectionName: SectionName, thresholdValue = 0.6, initiallyInView = false) {
   const { ref, inView } = useInView({
-    threshold: thresholdValue
+    threshold: thresholdValue,
+    initialInView: initiallyInView
   });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { activeSection, setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
+    if (sectionName  === "About" && activeSection === "Home" ) {
+      setActiveSection("Home");
+    }
+    else if (sectionName === "Home" && !inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("About");
+    }
+    else if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(sectionName);
     }
-  }, [inView, setActiveSection, timeOfLastClick, sectionName]);
+  }, [activeSection, inView, setActiveSection, timeOfLastClick, sectionName]);
 
   return { ref, inView }
 }

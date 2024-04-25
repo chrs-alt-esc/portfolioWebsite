@@ -9,7 +9,7 @@ import SectionHeading from "./section_heading";
 import useSectionInView from "@/lib/hooks";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.4);
+  const { ref } = useSectionInView("Experience", 0.7);
   
   return (
     <section
