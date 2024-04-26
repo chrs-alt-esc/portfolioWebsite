@@ -12,8 +12,8 @@ import useSectionInView from '@/lib/hooks';
 import { useActiveSectionContext } from "@/context/active_section_context";
 
 
-export default function Intro(this: any) {
-  const { ref } = useSectionInView("Home", 0.8, true);
+export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.4, true);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -92,20 +92,23 @@ export default function Intro(this: any) {
         >
           Download resume <HiDownload className="opacity-60 transition"/>
         </a>
-        <a 
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full borderBlack outline-none mr-10 sm:mr-0 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
-          href="https://www.linkedin.com/in/chris-r-escobar/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-        <a 
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full borderBlack outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
-          href="https://github.com/crscobar"
-          target='_blank'
-        >
-          <FaGithubSquare />
-        </a>
+        <div className="flex sm:flex-row justify-center items-center sm:gap-6 px-7 sm:px-0">
+          <a 
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full borderBlack outline-none mr-10 sm:mr-0 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
+            href="https://www.linkedin.com/in/chris-r-escobar/"
+            target="_blank"
+          >
+            <BsLinkedin />
+          </a>
+          
+          <a 
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full borderBlack outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
+            href="https://github.com/crscobar"
+            target='_blank'
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   )

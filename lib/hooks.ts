@@ -1,41 +1,51 @@
 import { useActiveSectionContext } from "@/context/active_section_context";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
 
 export default function useSectionInView(sectionName: SectionName, thresholdValue = 0.6, initiallyInView = false) {
+  const [ width, setWidth ] = useState(0)
+  const [ height, setHeight ] = useState(0)
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  // This is to help with activeSection responsiveness on small smarthphone devices
+  // without this, the 'Experience' section does not get activated properly when scrolling up from bottom
+  if ((width < 400 || height < 800) && sectionName === "Experience") {
+    thresholdValue = thresholdValue * 0.4;
+  }
+  if ((width >= 400 || height >= 800) && sectionName === "Experience") {
+    thresholdValue = thresholdValue * 1.5;
+  }
+  
   const { ref, inView } = useInView({
     threshold: thresholdValue,
     initialInView: initiallyInView
   });
   const { activeSection, setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-  console.log("\nCurrent Active Section: " + activeSection);
-  console.log("Passed in section: " + sectionName);
 
   useEffect(() => {
+    handleWindowResize();
+
     if (sectionName  === "About" && activeSection === "Home" ) {
-      console.log("If 1");
       setActiveSection("Home");
     }
-    else if (sectionName === "Home" && !inView && Date.now() - timeOfLastClick > 1000) {
-      console.log("If 2 (sectionName = " + sectionName + " )");
+    else if (sectionName === "Home" && !inView && activeSection === "Home" && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("About");
     }
     else if (inView && Date.now() - timeOfLastClick > 1000) {
-      console.log("If 4 (sectionName = " + sectionName + " )");
-      console.log("If 4 (activeSection = " + activeSection + " )");
       setActiveSection(sectionName);
     }
     else if (activeSection === "Contact" && !inView && Date.now() - timeOfLastClick > 1000) {
-      console.log("If 3 (sectionName = " + sectionName + " )");
-      console.log("If 3 (activeSection = " + activeSection + " )");
-      setActiveSection("Experience");
+
+      setActiveSection("Skills");
     }
   }, [activeSection, inView, setActiveSection, timeOfLastClick, sectionName]);
-
-  console.log("New Active Section: " + activeSection + "\n");
 
   return { ref, inView }
 }
