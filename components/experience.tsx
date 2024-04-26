@@ -14,7 +14,7 @@ export default function Experience() {
   return (
     <section
       ref={ref}
-      className="my-10 flex w-full scroll-mt-28 flex-col items-center justify-center"
+      className="my-10 sm:mb-20 flex w-full scroll-mt-28 flex-col items-center justify-center"
       id="experience"
     >
       <SectionHeading>My Work Experience</SectionHeading>

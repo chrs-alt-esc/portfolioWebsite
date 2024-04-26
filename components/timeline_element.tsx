@@ -28,7 +28,7 @@ export default function TimelineElement({ item }: ExperienceElementProps) {
           boxShadow: "none",
           border: theme === "light" ? "1px solid rgba(0,0,0,0.05)" : "1px solid rgba(255, 255, 255, 0.2)",
           textAlign: "left",
-          padding: "1.3rem 2rem"
+          padding: "1.25rem 1.5rem 1.25rem 1.5rem"
         }}
         contentArrowStyle={{
           borderRight: theme === "light" ? "0.4rem solid #9ca3af" : "0.4rem solid rgba(255, 255, 255, 0.4)"
