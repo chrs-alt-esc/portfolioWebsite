@@ -1,6 +1,10 @@
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import mipsImg from "@/public/mips_vert.png";
+import cpuFaultSimImg from "@/public/CPU-fault-sim.png";
+import portWebImg from "@/public/SCR-20240429-pbgf.jpeg";
+import ibmGreenScreenImg from "@/public/Ibmi-main-menu.png"
 import logoIBM from "@/public/ibm_logo.png";
 import logoOracle from "@/public/oracle_logo.png";
 import logoHoneywell from "@/public/honeywell_logo.png";
@@ -70,34 +74,34 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Portfolio website",
-    description: "Made this website that you are on right now :)",
+    title: "Portfolio Website",
+    description: "Created this website that you are browsing right now, thanks for visiting!",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    imageUrl: corpcommentImg,
+    imageUrl: portWebImg,
   },
-  {
-    title: "Github Gists clone",
-    description: "Made a website that works very similar to Github Gists using Elixir and the Phoenix Framework.",
-    tags: ["Elixir", "Phoenix", "JavaScript", "Tailwind CSS", "PostgreSQL", "Docker"],
-    imageUrl: rmtdevImg,
-  },
+  // {
+  //   title: "Github Gists Clone",
+  //   description: "Made a website that works very similar to Github Gists using Elixir and the Phoenix Framework.",
+  //   tags: ["Elixir", "Phoenix", "JavaScript", "Tailwind CSS", "PostgreSQL", "Docker"],
+  //   imageUrl: rmtdevImg,
+  // },
   {
     title: "Platform Visualization Tool",
     description: "Refactored an internal visualization tool for complex IBM systems and all their hardware and I/O devices.",
     tags: ["Python", "tkinter", "JSON", "CSV"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: ibmGreenScreenImg,
   },
   {
-    title: "MIPS Multi-cycle CPU",
-    description: "Coded a multi-cycle MIPS CPU from scratch in SystemVerilog with 100% instruction accuracy.",
-    tags: ["SystemVerilog", "Verilog", "MIPs", "Computer architecture", "Finite-state machine"],
-    imageUrl: corpcommentImg,
-  },
-  {
-    title: "CPU fault simulator",
+    title: "CPU Fault Simulator",
     description: "Coded a CPU fault simulator from scratch in Python with 100% accuracy.",
-    tags: ["Python"],
-    imageUrl: rmtdevImg,
+    tags: ["Python", "CLI", "CSV", "Terminal"],
+    imageUrl: cpuFaultSimImg,
+  },
+  {
+    title: "MIPS Multi-Cycle CPU",
+    description: "Coded a multi-cycle MIPS CPU from scratch in SystemVerilog with 100% instruction accuracy.",
+    tags: ["SystemVerilog", "MIPs", "Computer architecture", "Finite-state machine"],
+    imageUrl: mipsImg,
   },
 ] as const;
 

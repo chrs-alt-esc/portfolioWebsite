@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import profilePic from '@/public/toad_dr_pepper.jpg';
+import profilePic from '@/public/cropped_profile_pic.png';
 import React from 'react';
 import { motion } from "framer-motion";
 import Link from 'next/link';
