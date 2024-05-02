@@ -3,7 +3,8 @@ import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import mipsImg from "@/public/mips_vert.png";
 import cpuFaultSimImg from "@/public/CPU-fault-sim.png";
-import portWebImg from "@/public/SCR-20240429-pbgf.jpeg";
+import faultEscapeSimImg from "@/public/faultEscapeMISR.png"
+import portWebImg from "@/public/portfolio-website.jpeg";
 import ibmGreenScreenImg from "@/public/Ibmi-main-menu.png"
 import logoIBM from "@/public/ibm_logo.png";
 import logoOracle from "@/public/oracle_logo.png";
@@ -78,30 +79,35 @@ export const projectsData = [
     description: "Created this website that you are browsing right now, thanks for visiting!",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     imageUrl: portWebImg,
+    link: "https://github.com/crscobar/portfolioWebsite"
   },
   // {
   //   title: "Github Gists Clone",
   //   description: "Made a website that works very similar to Github Gists using Elixir and the Phoenix Framework.",
   //   tags: ["Elixir", "Phoenix", "JavaScript", "Tailwind CSS", "PostgreSQL", "Docker"],
   //   imageUrl: rmtdevImg,
+  //   link: "https://github.com/crscobar/learning-elixir/tree/main/elixir_gist"
   // },
   {
     title: "Platform Visualization Tool",
     description: "Refactored an internal visualization tool for complex IBM systems and all their hardware and I/O devices.",
     tags: ["Python", "tkinter", "JSON", "CSV"],
     imageUrl: ibmGreenScreenImg,
+    link: ""
   },
   {
-    title: "CPU Fault Simulator",
+    title: "Fault Escape Simulator",
     description: "Coded a CPU fault simulator from scratch in Python with 100% accuracy.",
     tags: ["Python", "CLI", "CSV", "Terminal"],
-    imageUrl: cpuFaultSimImg,
+    imageUrl: faultEscapeSimImg,
+    link: "https://github.com/crscobar/FaultEscapeSimMISR/tree/main"
   },
   {
     title: "MIPS Multi-Cycle CPU",
     description: "Coded a multi-cycle MIPS CPU from scratch in SystemVerilog with 100% instruction accuracy.",
-    tags: ["SystemVerilog", "MIPs", "Computer architecture", "Finite-state machine"],
+    tags: ["SystemVerilog", "Finite-state machine", "MIPS", "Computer architecture", ],
     imageUrl: mipsImg,
+    link: "https://github.com/crscobar/MultiCycleCpuMips"
   },
 ] as const;
 

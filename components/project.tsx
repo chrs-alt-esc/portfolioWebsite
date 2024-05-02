@@ -3,11 +3,13 @@
 import React, {useRef} from 'react';
 import { projectsData } from '@/lib/data';
 import Image from 'next/image';
+import { TbExternalLink } from "react-icons/tb";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
 
 type ProjectProps = typeof projectsData[number];
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, link }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null)
 
   const {scrollYProgress } = useScroll({
@@ -18,6 +20,9 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const projectLink = () => {
+
+  }
   return (
     <motion.div
       ref={ref}
@@ -30,9 +35,16 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
       <section
         className="bg-gray-100 max-w-[45rem] borderBlack overflow-hidden h-auto sm:pr-8 sm:h-[20rem] relative hover:bg-gray-200 transition sm:group-even:pl-10 rounded-lg dark:bg-white/10 dark:hover:bg-white/20 dark:text-white"
       >
-        <div className="pt-4 pb-4 px-4 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[16rem] dark:text-white/85">
+        <div className="group pt-4 pb-4 px-4 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[52%] flex flex-col h-full sm:group-even:ml-[16rem] dark:text-white/85">
           <h3 className="text-l sm:text-2xl font-semibold">
             {title}
+            {title !== "Platform Visualization Tool" &&
+              <Link href={link} target="_blank" className="relative pl-1 top-[0.2rem]">
+                <button type="button">
+                  <TbExternalLink className="hover:text-gray-500 transition scale-[0.85] hover:scale-[0.95] hover:translate-x-[0.2rem] hover:-translate-y-[0.2rem]"/>
+                </button>
+              </Link>
+            }
           </h3>
           <p className="text-[0.9rem] sm:text-l mt-2 leading-relaxed text-gray-700 dark:text-white/80">
             {description}
