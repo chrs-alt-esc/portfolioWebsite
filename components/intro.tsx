@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import profilePic from '@/public/cropped_profile_pic.png';
+import profilePic from '@/public/img/cropped_profile_pic.png';
 import React from 'react';
 import { motion } from "framer-motion";
 import Link from 'next/link';
@@ -44,7 +44,7 @@ export default function Intro() {
                   rotate: [0, -18, 0, 18, 0, -18, 0]
                 }}
                 transition = {{ 
-                  delay: 1,
+                  delay: 0.8,
                   duration: 0.75,
                   time: [0, 0.1, 0.25, 0.35, 0.5, 0.625, 0.75],
                 }}

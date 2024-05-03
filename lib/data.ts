@@ -1,12 +1,12 @@
-import cShellImg from "@/public/c_shell.png"
-import mipsImg from "@/public/mips_vert.png";
-import faultEscapeSimImg from "@/public/faultEscapeMISR.png"
-import portWebImg from "@/public/portfolio-website.jpeg";
-import ibmGreenScreenImg from "@/public/ibmGreenScreen.png"
-import logoIBM from "@/public/ibm_logo.png";
-import logoOracle from "@/public/oracle_logo.png";
-import logoHoneywell from "@/public/honeywell_logo.png";
-import logoPRA from "@/public/pra_logo.png";
+import cShellImg from "@/public/img/c_shell.png"
+import mipsImg from "@/public/img/mips_vert.png";
+import faultEscapeSimImg from "@/public/img/faultEscapeMISR.png"
+import portWebImg from "@/public/img/portfolio-website.jpeg";
+import ibmGreenScreenImg from "@/public/img/ibmGreenScreen.png"
+import logoIBM from "@/public/img/ibm_logo.png";
+import logoOracle from "@/public/img/oracle_logo.png";
+import logoHoneywell from "@/public/img/honeywell_logo.png";
+import logoPRA from "@/public/img/pra_logo.png";
 
 export const links = [
   {
