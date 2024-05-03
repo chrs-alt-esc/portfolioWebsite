@@ -25,9 +25,14 @@ export default function RootLayout({
         <link rel="icon" href="/img/icon.ico" sizes="any" />
         <meta property="og:title" content="Chris | Dev Portfolio" />
         <meta property="og:description" content="Software dev with 3 YOE"/>
-        <meta property="og:image" content="https://unsplash.com/photos/rectangular-gray-and-black-board-2mEx6GSAl0c" />
+        <meta property="og:image" content="/img/meta-image.jpg" />
         <meta property="og:url" content="https://chrisesco.vercel.app/" />
         <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Chris | Dev Portfolio" />
+        <meta name="twitter:description" content="Software dev with 3 YOE" />
+        <meta name="twitter:image" content="/img/meta-image.jpg" />
+        <meta name="twitter:card" content="/img/meta-image.jpg" />
+        <meta name="image" content="/img/meta-image.jpg"/>
       </head>
       <body className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:-text-opacity-90`}>
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
