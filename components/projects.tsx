@@ -24,7 +24,7 @@ export default function Projects() {
       </div>
       <div className="flex py-8 sm:py-20 w-fit">
         <a 
-          className="bg-white px-7 py-3 flex items-center justify-center gap-2 rounded-full borderBlack outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
+          className="bg-white px-7 py-3 text-sm sm:text-md flex items-center justify-center gap-2 rounded-full borderBlack outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
           href="https://github.com/crscobar?tab=repositories"
           target="_blank"
         >

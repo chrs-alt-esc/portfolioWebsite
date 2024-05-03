@@ -53,11 +53,11 @@ export default function TimelineElement({ item  }: ExperienceElementProps) {
       >
         <h3 className="font-semibold capitalize dark:text-white/85">{item.title}</h3>
         <p className="font-normal text-gray-600 !mt-0 dark:text-white/70">{item.location}</p>
-        <ul className="!mt-1 !font-normal text-gray-600 dark:text-white/70">
+        <ul className="!mt-1 text-[0.8rem] sm:text-md !font-normal text-gray-600 dark:text-white/70">
           {item.description.map((descLine, index) => (
             <li 
               key={index}
-              className="!mt-1 !font-normal text-gray-600 dark:text-white/70 list-disc list-inside"
+              className="list-disc list-inside"
             >
               {descLine as string}
             </li>
