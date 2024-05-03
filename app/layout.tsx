@@ -10,8 +10,8 @@ import ThemeContextProvider from '@/context/theme_context'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Chris | Personal Portfolio',
-  description: 'Chris is a software developer with 3 years of experience',
+  title: 'Chris | Dev Portfolio',
+  description: 'Software dev with 3 YOE.',
 }
 
 export default function RootLayout({
@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <head>
         <link rel="icon" href="/img/icon.ico" sizes="any" />
-        <meta property="og:title" content="Chris | Personal Portfolio" />
+        <meta property="og:title" content="Chris | Dev Portfolio" />
         <meta property="og:description" content="Software dev with 3 YOE"/>
-        <meta property="og:image" content="/img/circuit.jpg" />
+        <meta property="og:image" content="https://unsplash.com/photos/rectangular-gray-and-black-board-2mEx6GSAl0c" />
         <meta property="og:url" content="https://chrisesco.vercel.app/" />
         <meta property="og:type" content="website" />
       </head>
