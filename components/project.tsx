@@ -44,7 +44,7 @@ export default function Project({ title, description, tags, imageUrl, link }: Pr
               </Link>
             }
           </h3>
-          <p className="text-[0.9rem] sm:text-l mt-2 leading-relaxed text-gray-700 dark:text-white/80">
+          <p className="text-[0.925rem] sm:text-l mt-2 leading-relaxed text-gray-700 dark:text-white/80">
             {description}
           </p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
