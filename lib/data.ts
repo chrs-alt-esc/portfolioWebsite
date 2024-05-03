@@ -74,7 +74,7 @@ export const projectsData = [
   {
     title: "Portfolio Website",
     description: "Created this website that you are browsing right now, thanks for visiting!",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "Framer Motion"],
     imageUrl: portWebImg,
     link: "https://github.com/crscobar/portfolioWebsite"
   },
