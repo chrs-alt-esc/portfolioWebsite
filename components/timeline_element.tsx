@@ -6,15 +6,15 @@ import { useTheme } from "@/context/theme_context";
 
 type ExperienceElementProps = {
   item: {
-    date: string
-    logo: StaticImageData
-    title: string
-    location: string
-    description: string
+    date: string;
+    logo: StaticImageData;
+    title: string;
+    location: string;
+    description: string[];
   }
 }
 
-export default function TimelineElement({ item }: ExperienceElementProps) {
+export default function TimelineElement({ item  }: ExperienceElementProps) {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -53,7 +53,16 @@ export default function TimelineElement({ item }: ExperienceElementProps) {
       >
         <h3 className="font-semibold capitalize dark:text-white/85">{item.title}</h3>
         <p className="font-normal text-gray-600 !mt-0 dark:text-white/70">{item.location}</p>
-        <p className="!mt-1 !font-normal text-gray-600 dark:text-white/70">{item.description}</p>
+        <ul className="!mt-1 !font-normal text-gray-600 dark:text-white/70">
+          {item.description.map((descLine, index) => (
+            <li 
+              key={index}
+              className="!mt-1 !font-normal text-gray-600 dark:text-white/70 list-disc list-inside"
+            >
+              {descLine as string}
+            </li>
+          ))}
+        </ul>
       </VerticalTimelineElement>
     </div>
   );

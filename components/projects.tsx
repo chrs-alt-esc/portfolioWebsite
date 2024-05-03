@@ -11,7 +11,7 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.4);
   
   return (
-    <section ref={ref} id="projects" className="grid scroll-mt-28 mb-28 mt-10 sm:mt-10 sm:mb-40 place-items-center">
+    <section ref={ref} id="projects" className="grid scroll-mt-28 mb-28 mt-10 sm:mt-10 sm:mb-32 place-items-center">
       <SectionHeading>Highlighted Projects</SectionHeading>
       <div>
         {

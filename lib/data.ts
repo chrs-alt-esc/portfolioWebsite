@@ -1,11 +1,8 @@
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import cShellImg from "@/public/c_shell.png"
 import mipsImg from "@/public/mips_vert.png";
-import cpuFaultSimImg from "@/public/CPU-fault-sim.png";
 import faultEscapeSimImg from "@/public/faultEscapeMISR.png"
 import portWebImg from "@/public/portfolio-website.jpeg";
-import ibmGreenScreenImg from "@/public/Ibmi-main-menu.png"
+import ibmGreenScreenImg from "@/public/ibmGreenScreen.png"
 import logoIBM from "@/public/ibm_logo.png";
 import logoOracle from "@/public/oracle_logo.png";
 import logoHoneywell from "@/public/honeywell_logo.png";
@@ -43,7 +40,7 @@ export const experiencesData = [
     title: "Full Stack Developer",
     company: "Oracle",
     location: "Remote, US",
-    description: "Lorem ipsum dolor sit amet. Est velit reprehenderit ut odio tempora sit impedit illo sed aliquam magni vel rerum Quis aut corporis saepe. In dolorem officia ut Quis libero ex deleniti porro? ",
+    description: ["Developed the messaging microservice for our health portal utilizing Ruby on Rails, React JS, and MySQL.", "Designed new REST API endpoints, significantly enhancing user experience and reducing errors by over 20%.", "Coordinated across 6+ teams to debug issues leveraging Splunk logs and New Relic metrics analysis.", "Performed stress tests to diagnose and optimize sluggish API endpoints, resulting in 50% faster response times."],
     logo: logoOracle,
     date: "July 2023 - March 2024"
   },
@@ -51,7 +48,7 @@ export const experiencesData = [
     title: "Backend Developer",
     company: "IBM",
     location: "Rochester, MN, US",
-    description: "Lorem ipsum dolor sit amet. Est velit reprehenderit ut odio tempora sit impedit illo sed aliquam magni vel rerum Quis aut corporis saepe. In dolorem officia ut Quis libero ex deleniti porro? ",
+    description: ["Built new public APIs for my clustering component in C++ and published official documentation for the APIs.", "Administered 100+ of our teams Ansible, IBM i, and VIOS test systems via vulnerability patching scripts.", "Collaborated with support teams to debug customer issues and shipped over 15 specialized fixes for our customers.", "Utilized object-oriented Python test framework to automate unit and regression tests, reducing test time over 50%."],
     logo: logoIBM,
     date: "June 2021 - June 2023"
   },
@@ -59,7 +56,7 @@ export const experiencesData = [
     title: "Test Engineer Intern",
     company: "Honeywell",
     location: "Lincolnshire, IL, US",
-    description: "Lorem ipsum dolor sit amet. Est velit reprehenderit ut odio tempora sit impedit illo sed aliquam magni vel rerum Quis aut corporis saepe. In dolorem officia ut Quis libero ex deleniti porro? ",
+    description: ["Created and optimized an internal beta testing application using object-oriented principles in C#.", "Reduced average product testing time about 33% by automating manual tasks with CSV files and Arduino.", "Collaborated with global teams to deploy my automated testing device and software, resulting in substantial improvements to their testing infrastructure, 33% faster testing times, and 10% test accuracy improvement."],
     logo: logoHoneywell,
     date: "June 2020 - August 2020",
   },
@@ -67,11 +64,11 @@ export const experiencesData = [
     title: "Programming Intern",
     company: "PRA Health Sciences",
     location: "Deerfield, IL, US",
-    description: "Lorem ipsum dolor sit amet. Est velit reprehenderit ut odio tempora sit impedit illo sed aliquam magni vel rerum Quis aut corporis saepe. In dolorem officia ut Quis libero ex deleniti porro? ",
+    description: ["Parsed and formatted client clinical trial data using macros to meet FDA CDISC terminology standard for analysis.", "Generated standardized clinical reports using SQL queries to extract data from SAS datasets of clinical trials."],
     logo: logoPRA,
     date: "June 2019 - August 2019"
   },
-] as const;
+];
 
 export const projectsData = [
   {
@@ -105,9 +102,16 @@ export const projectsData = [
   {
     title: "MIPS Multi-Cycle CPU",
     description: "Coded a multi-cycle MIPS CPU from scratch in SystemVerilog with 100% instruction accuracy.",
-    tags: ["SystemVerilog", "Finite-state machine", "MIPS", "Computer architecture", ],
+    tags: ["SystemVerilog", "cache", "MIPS", "Computer architecture"],
     imageUrl: mipsImg,
     link: "https://github.com/crscobar/MultiCycleCpuMips"
+  },
+  {
+    title: "CShell",
+    description: "Coded a UNIX-style shell from scratch in C using the posix_spawn interface instead of the outdated fork interface.",
+    tags: ["C", "posix_spawn", "shell", "unix"],
+    imageUrl: cShellImg,
+    link: "https://github.com/crscobar/CShell"
   },
 ] as const;
 
