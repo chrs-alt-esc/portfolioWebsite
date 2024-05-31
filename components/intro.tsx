@@ -87,7 +87,7 @@ export default function Intro() {
         </Link>
         <a 
           className="group bg-white text-sm sm:text-base px-7 py-3 flex items-center gap-2 rounded-full borderBlack outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/20 dark:text-white/80"
-          href="/Chris_Escobar_resume_tech2c.pdf"
+          href="/Chris_Escobar_resume_fs1c.pdf"
           download
         >
           Download resume <HiDownload className="opacity-60 transition"/>
